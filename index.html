@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <p><span>A</span>man</p>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <a class="navicon close" href="#"><i class="bi bi-x-lg"></i></a>
+            </ul>
+            <a class="navicon" href=""><i id="bar" class="bi bi-list"></i></a>
+        </nav>
+        <div id="header">
+            <div class="header-text">
+                <p>Front-end Devloper</p>
+                <h1>Hi, I'm <span>Aman</span></h1>
+            </div>
+            <div class="img-bg"><img src="img/bg.jpg" alt=""></div>
+        </div>
+    </div>
+
+<!-- about -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="img/photo.jpg" alt="">
+                </div>
+                <div class="col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Passionate about crafting exceptional web experiences, I am a Frontend Web developer with expertise in HTML, CSS, and JavaScript complemented by proficiency in React and NextJS. My journey involves seamlessly blending creativity with functionality, translating ideas into responsive and visually captivating websites. With a keen eye for design and a commitment to staying at the fore front of web development trends, I strive to create user-centric, intuitive interfaces that leave a lasting impression. Let us transform your digital vision into a stunning reality together.</p>
+
+                    <div class="tab-titles">
+                        <div class="tab-contents">
+                            <p class="tab-link">Slills</p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>ReactJS</li>
+                                <li>Bootstrap</li>
+                                <li>NextJS</li>
+                        </div>
+                        <div class="tab-contents">
+                            <p class="tab-link">Education</p>
+                            <ul>
+                                <li><span>2023</span><br>B.tech(Mechanical),UIET,Kurukshetra University</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio  -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/todo.jpg" alt="">
+                    <div class="layer">
+                        <h3>Todo list</h3>
+                        <p>Todo list to maintain day to day task, edit task as your need, delete and mark. <br>
+                        using ReactJS contextAPI with local storage</p>
+                        <a href="https://todo-list-001-red.vercel.app/"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/e-com.jpg" alt="">
+                    <div class="layer">
+                        <h3>E-Commerce Website</h3>
+                        <p>Clothing mullti page e-commerce website with deffrent section. <br>
+                        using HTML CSS js</p>
+                        <a href="https://e-commerce-one-jade.vercel.app/"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/real.jpg" alt="">
+                    <div class="layer">
+                        <h3>Real Estate Website</h3>
+                        <p>Realestate website <br>
+                        using ReactJS</p>
+                        <a href="https://realestate-one-cyan.vercel.app/"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact  -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>amandahiya54321@gmail.com</p>
+                <p>+91 7042005022</p>
+                <div class="social-icon">
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                </div>
+                <a href="" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn1">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="coppyright">
+            Copyright c aman. Made latest project
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxVrHVZaY6Cxt10u_r27dIBZSoLM-PObO2XsDvO5nM7C7_4YzzPd6s1TMImJD2I2jQN/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
